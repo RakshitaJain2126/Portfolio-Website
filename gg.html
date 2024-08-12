@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Dropdown</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        background-color: #f8f8f8;
+        padding: 10px 0;
+        z-index: 1000;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+      }
+
+      .nav-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .nav-list > li {
+        position: relative;
+        margin: 0 10px;
+      }
+
+      .nav-list > li > a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .nav-list > li:hover > a {
+        background-color: #eee;
+      }
+
+      .navbar-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        z-index: 1000;
+      }
+
+      .navbar-dropdown li a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        transition: background-color 0.3s;
+      }
+
+      .navbar-dropdown li a:hover {
+        background-color: #f0f0f0;
+      }
+
+      .nav-list > li:hover .navbar-dropdown {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <ul class="nav-list">
+          <li class="socials">
+            <a href="#">Socials</a>
+            <ul class="navbar-dropdown">
+              <li>
+                <a href="https://www.linkedin.com/in" target="_blank"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/1" target="_blank"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a href="https://discord.com/invite/" target="_blank"
+                  >Discord</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <script>
+      // Optional JavaScript for additional functionality if needed
+    </script>
+  </body>
+</html>

@@ -174,25 +174,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navItems.forEach((item) => {
     item.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = item.querySelector('a').getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
+      if (!e.target.closest('.socials')) {
+        e.preventDefault();
+        const targetId = item.querySelector('a').getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
 
-      if (targetSection) {
-        const offsetTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'auto'
-        });
-      }
+        if (targetSection) {
+          const offsetTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'auto'
+          });
+        }
 
-      navItems.forEach((i) => i.classList.remove("active"));
-      item.classList.add("active");
-      updateIndicator();
+        navItems.forEach((i) => i.classList.remove("active"));
+        item.classList.add("active");
+        updateIndicator();
 
-      if (navList.classList.contains("show")) {
-        navList.classList.remove("show");
-        navToggle.classList.remove("active");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+          navToggle.classList.remove("active");
+        }
       }
     });
   });
