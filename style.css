@@ -229,6 +229,11 @@ nav {
   .nav-list.show .nav-active-indicator {
     display: none;
   }
+
+  .navigation{
+    background-color: none;
+    backdrop-filter: none;
+  }
 }
 
 .nav-list.hide-indicator .nav-active-indicator {
