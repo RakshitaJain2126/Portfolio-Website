@@ -628,7 +628,7 @@ nav {
 .text-section-reversed,
 .video-section-reversed {
   flex: 1;
-  padding: 20px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -654,6 +654,7 @@ nav {
 
 .text-section-reversed {
   padding-right: 80px;
+  padding-left: 20px;
 }
 
 video {
@@ -664,6 +665,11 @@ video {
 }
 
 @media (max-width: 768px) {
+  
+  #about .section-title{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   .about,
   .about-reversed {
